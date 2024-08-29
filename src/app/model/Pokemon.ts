@@ -1,6 +1,6 @@
 import { typeWithParameters } from "@angular/compiler/src/render3/util"
 
-export class Pokemons{
+export class Pokemon{
     public id:number
     public name:number
     public type: any
