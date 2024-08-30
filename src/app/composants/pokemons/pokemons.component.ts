@@ -11,13 +11,20 @@ import { Pokemon } from 'src/app/model/Pokemon';
 export class PokemonsComponent implements OnInit {
   public pokemonResult: Array<PokemonResults> = [];
   public pokemons: Array<Pokemon> = [];
+  public pokemon!:Pokemon
 
   constructor(@Inject(PokemonService) private pokemonService: PokemonService) { }
 
   ngOnInit(): void {
     this.pokemonService.getPokemons().subscribe((res: PokemonResponse) => {
       this.pokemonResult = res.results;
-      //TODO Boucle For
+      for(let pokemonResult of this.pokemonResult){
+        this.pokemonService.getPokemonsDetail(pokemonResult.url).subscribe(res=>{
+          this.pokemon.name = res.name
+          this.pokemon.id = res.id
+          
+        })
+      }
     })
   }
 }

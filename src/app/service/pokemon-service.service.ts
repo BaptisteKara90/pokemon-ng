@@ -20,7 +20,7 @@ export class PokemonService {
     return this._httpClient.get<PokemonResponse>(this._base_url + 'pokemon')
   }
 
-  public getPokemonsDetail(url:string): Observable<Pokemon[]>{
-    return this._httpClient.get<Pokemon[]>(url)
+  public getPokemonsDetail(url:string): Observable<Pokemon>{
+    return this._httpClient.get<Pokemon>(url)
   }
 }
