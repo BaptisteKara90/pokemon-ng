@@ -22,7 +22,7 @@ export class PokemonsComponent implements OnInit {
         this.pokemonService.getPokemonsDetail(pokemonResult.url).subscribe(res=>{
           this.pokemon.name = res.name
           this.pokemon.id = res.id
-          
+          this.pokemon.image = res.image
         })
       }
     })

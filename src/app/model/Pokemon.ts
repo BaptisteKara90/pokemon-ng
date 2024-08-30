@@ -4,11 +4,11 @@ export class Pokemon{
     public id:number
     public name:number
     public type: any
-    public image: string
+    public image: sprites
     public height: number | undefined
     public weight:number | undefined
 
-    constructor(id:number, name:number, type: any, image: string, height: number | undefined, weight:number | undefined){
+    constructor(id:number, name:number, type: any, image: sprites, height: number | undefined, weight:number | undefined){
         this.id = id
         this.name = name
         this.type = type
@@ -16,4 +16,9 @@ export class Pokemon{
         this.height = height
         this.weight = weight
     }
+}
+
+export interface sprites{
+    front_default:string
+    back_default:string
 }
