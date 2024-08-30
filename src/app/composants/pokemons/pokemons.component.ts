@@ -17,7 +17,9 @@ export class PokemonsComponent implements OnInit {
   ngOnInit(): void {
     this.pokemonService.getPokemons().subscribe((res: PokemonResponse) => {
       this.pokemonResult = res.results;
-      console.log(this.pokemonResult);
+      //TODO Boucle For
     })
   }
 }
+
+

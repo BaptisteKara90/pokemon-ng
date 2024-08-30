@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import { Pokemon } from '../model/Pokemon';
 import { PokemonResponse } from '../model/PokemonsResponse';
+import { PokemonResults } from '../model/PokemonsResponse';
 
 
 @Injectable({
